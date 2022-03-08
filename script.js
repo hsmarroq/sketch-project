@@ -22,10 +22,11 @@ function populateBoard(size) {
 populateBoard(16);
 
 function changeSize(input) {
-  if (input >= 2 || input <= 100) {
+  if (input >= 2 && input <= 100) {
     populateBoard(input);
+    document.querySelector('.gridSize').style.color = 'black';
   } else {
-    console.log('Too many/few squares');
+    document.querySelector('.gridSize').style.color = 'red';
   }
 }
 
@@ -46,7 +47,7 @@ function changeColor(choice) {
 function resetBoard() {
   let board = document.querySelector('.board');
   let square = board.querySelectorAll('div');
-  square.forEach(div => (div.style.backgroundColor = 'silver'));
+  square.forEach(div => (div.style.backgroundColor = 'white'));
 }
 
 document.querySelector('body').addEventListener('click', () => {

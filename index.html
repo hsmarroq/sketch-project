@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
     <link rel="stylesheet" href="/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@100&family=Barlow:wght@100&family=Dosis:wght@200&family=Meow+Script&family=Pacifico&family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <title>ETCH-A-SKETCH</title>
   </head>
   <body>
@@ -17,11 +23,19 @@
       <div class="content">
         <div class="board"></div>
         <div class="buttons">
-          <button onclick="changeColor('black')">Black</button>
-          <button onclick="changeColor('white')">Eraser</button>
-          <button onclick="changeColor('silver')">Silver</button>
-          <button onclick="changeColor('random')">Random</button>
-          <button onclick="resetBoard()">Reset</button>
+          <button class="black-btn" onclick="changeColor('black')">
+            Black
+          </button>
+          <button class="white-btn" onclick="changeColor('white')">
+            Eraser
+          </button>
+          <button class="silver-btn" onclick="changeColor('silver')">
+            Silver
+          </button>
+          <button class="random-btn" onclick="changeColor('random')">
+            Random
+          </button>
+          <button class="reset-btn" onclick="resetBoard()">Reset</button>
         </div>
         <div class="input">
           <input
@@ -34,7 +48,7 @@
         </div>
         <div class="rules">
           <p class="dbl-Click">Double click sketchpad to start draiwng.</p>
-          <p>Size needs to be within 2-100.</p>
+          <p class="gridSize">Size needs to be within 2-100.</p>
         </div>
       </div>
     </div>

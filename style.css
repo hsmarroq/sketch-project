@@ -9,6 +9,22 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+/* Title */
+.title {
+  margin-top: 105px;
+  margin-bottom: 20px;
+  font-size: 40px;
+  font-family: 'Pacifico';
+}
+
+/* Mode */
+.mode {
+  font-size: 20px;
+  font-family: 'Quicksand';
+  color: black;
 }
 
 /* Sketch Board */
@@ -17,6 +33,7 @@ body {
   height: 300px;
   display: grid;
   margin-top: 20px;
+  border-radius: 20px;
 }
 
 /* Buttons */
@@ -29,8 +46,42 @@ body {
   text-align: center;
 }
 
+button {
+  border-radius: 10px;
+}
+
 button:hover {
   cursor: pointer;
+}
+
+.black-btn {
+  background-color: black;
+  color: #fff;
+}
+
+.white-btn {
+  background-color: #fff;
+  color: black;
+}
+
+.silver-btn {
+  background-color: silver;
+  color: black;
+}
+
+.random-btn {
+  background: linear-gradient(
+    45deg,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet,
+    red
+  );
+  color: white;
 }
 
 /* Input */
@@ -50,6 +101,8 @@ button:hover {
   align-items: center;
   text-align: center;
   gap: 10px;
+  font-family: 'Quicksand';
+  color: black;
 }
 
 .dbl-Click {
