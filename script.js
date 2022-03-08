@@ -1,7 +1,7 @@
 'use strict';
 
 let color = 'black';
-let click = true;
+let click = false;
 
 function populateBoard(size) {
   let board = document.querySelector('.board');
@@ -14,7 +14,7 @@ function populateBoard(size) {
   for (let i = 0; i < amount; i++) {
     let square = document.createElement('div');
     square.addEventListener('mouseover', colorSquare);
-    square.style.backgroundColor = 'silver';
+    square.style.backgroundColor = 'white';
     board.insertAdjacentElement('beforeend', square);
   }
 }
@@ -51,4 +51,20 @@ function resetBoard() {
 
 document.querySelector('body').addEventListener('click', () => {
   click = !click;
+  if (click) {
+    document.querySelector('.mode').textContent = `Mode: Coloring`;
+  } else {
+    document.querySelector('.mode').textContent = `Mode: Not Coloring`;
+  }
+
+  document.querySelector('body').addEventListener('click', e => {
+    if (e.target.tagName != 'BUTTON') {
+      click = !click;
+      if (click) {
+        document.querySelector('.mode').textContent = `Mode: Coloring`;
+      } else {
+        document.querySelector('.mode').textContent = `Mode: Not Coloring`;
+      }
+    }
+  });
 });
