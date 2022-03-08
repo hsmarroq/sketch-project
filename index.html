@@ -16,17 +16,23 @@
       <div class="content">
         <div class="board"></div>
         <div class="buttons">
-          <button>Black</button>
-          <button>White</button>
-          <button>Random</button>
-          <button>Reset</button>
+          <button onclick="changeColor('black')">Black</button>
+          <button onclick="changeColor('silver')">Eraser</button>
+          <button onclick="changeColor('white')">White</button>
+          <button onclick="changeColor('random')">Random</button>
+          <button onclick="resetBoard()">Reset</button>
         </div>
         <div>
-          <input type="text" placeholder="Size of Board" />
+          <input
+            type="text"
+            placeholder="Size of Board"
+            value="16"
+            onchange="changeSize(this.value)"
+          />
           <button>Set Size</button>
         </div>
       </div>
     </div>
-    <script src="/script.js"></script>
   </body>
+  <script src="/script.js"></script>
 </html>
